@@ -30,7 +30,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Tech Stack</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Process</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
@@ -42,13 +42,16 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
+                                 <h3 class="we-found btn-text display-4">We found <strong><span style='text-transform: capitalize;'>{{labels}}!</span></strong></h3>
+                    {% if labels == 'no emotion' %}
+                    <div>We missed? See why below.</div>
+                    {% else %}
+                    <div class="lead"><em>with {{ confidences }} confidence.</em></div>
+                    {% endif %}
+                <img src="{{ url_for('static', filename='uploads/' + filename)}}" width="350" height="350">
                 <div class="masthead-subheading">Travel With Assurance.</div>
                 <div class="masthead-heading text-uppercase">Convert<br>With Ease</div>
-                <a class="btn btn-primary btn-xl text-uppercase" id='seefood_button'> 
-                                                  <form id='seefood_form' method=post enctype=multipart/form-data>
-                                    <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
-                                </form>
-                  Try Our Product</a>
+
             </div>
         </header>
 
@@ -88,54 +91,25 @@
 </style>
      
   
-    <div class="row">
-  <div class="column" style="background-color:#F8F9FA;">
-       <div class="card" height = 2.5rem width = 1.5rem>
-                            <a class="portfolio-link" data-bs-toggle="modal" href="">
-                           
-<div style="text-align: center;">
-<div>
+   
   
-  </div>
-                                <img class="card-top-img-fluid" src="https://s.wsj.net/public/resources/images/BN-HL850_krona0_G_20150318092849.jpg" style="max-width: 90%"/>
-                              </div>  
-                            </a>
-                            <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
-                              <div class="portfolio-caption-heading"><p style="color:black; font-size:1vw; font-family:Times New Roman">Handling foreign currency can be daunting during travel.<br><br>Let us help.</p></div>
-                              <div class="portfolio-caption-subheading text-muted"></div>
-                            </div>
-                        </div>
-                    </div>
-                   
-  <div class="column" style="background-color:#F8F9FA;">
-    <div class="card" height = 2.5rem width = 1.5rem>
-                            <a class="portfolio-link" data-bs-toggle="modal" href="https://www.python.org/">
-                                <div class="portfolio-hover">
-                              
-                                <img class="card-top-img-fluid" src="https://cocalc19.ai-camp.dev/dc3c524b-b1a9-4d5a-abf7-cab86ab7be3c/port/12345/static/uploads/nzd.jpg" style="max-width: 90%"/>
-                           
-                            <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
-                              <div class="portfolio-caption-heading"><p style="color:black; font-size:1vw; font-family:Times New Roman">Our mission is to assist you in easily identifying your bills with object recognition technology and always be aware of the price you’re spending in your currency.</p></div>
-                                
-                            </div>
-                        
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-</div>
-  
-   </div>
-</div>
-    </div>
  
             <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-            <h3 class="section-subheading text-muted">TEXT HERE</h3>
+                  
+
+
+                    <h2 class="section-heading text-uppercase">Our Product</h2>
+            <h3 class="section-subheading text-muted">Please upload an image of currency, a menu or a price tag</h3>
         </div>
         <div class="row text-center">
-            <img src="{{ url_for('static', filename='assets/img/logo.JPG')}}" alt="..." width="20px" height="auto" margin-left: auto; margin-right: auto; />
+            <div class="upload"><strong></strong>
+                   <form>
+                     <input type = "file" name = "upload" accept = "image/*" />
+                   </form>
+            </div>
         </div>
     </div>
 </section>
@@ -198,67 +172,7 @@
             </div>
         </section>
         <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Development Process</h2>
-                    <h3 class="section-subheading text-muted">Despite only having three weeks, we fought with several AI and OCR algorithms with further training and use of alternative data.</h3>
-                </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='/images/cocalcimg.png')}}" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>7/18-8/5</h4>
-                                <h4 class="subheading">Topic Selection</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">We began by collecting project ideas from the group, then we assessed the viability from a technological standpoint and potential use case. After initially settling on facial recognition, we switched to a currency converter due to the technical challenges associated with facial recognition training and a limited use case.  </p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='IMAGEIMAGEIMAGE.png')}}" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>7/21</h4>
-                                <h4 class="subheading">Data</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">We then set out to gather data on banknotes, price tags, and menus from around the world that could use to train an AI model. We collected images in Roboflow and utilized them to train Yolov5 and Yolov7 models in Google Colab and Runpod.</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='gpssat.jpg')}}" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>7/26-29</h4>
-                                <h4 class="subheading">Conversion</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">After identifying the image, it is passed to EasyOCR to lift the bill's denomination off the not. We also wrote a function to take the EXIF GPS data from the photo to identify the country in which the person took the photo and then determine the currency used there.</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='currencybox.jpg')}}" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>July 2020</h4>
-                                <h4 class="subheading">Final Product</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">The final product accepts an image of a price tag, menu, or bill. It identifies the images and locates the price(s) on it. It combines the price with the GPS location to attain the conversion rates. Finally, it projects the price of the image in a more familiar currency.</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
+
         <!-- Team-->
         <section class="page-section bg-light" id="team">
             <div class="container">
@@ -272,8 +186,8 @@
                             <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
                             <h4>Prasanga Neupane</h4>
                             <p class="text-muted">Team Instructor</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/prasanga_neupane" aria-label="Prasanga Neupane Instagram Profile"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/829912458453975050" aria-label="Prasanga Neupane Discord Profile"><i class="fab fa-discord"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Prasanga Neupane Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Prasanga Neupane Facebook Profile"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/prasanga-neupane-b4663a167/" aria-label="Prasanga Neupane LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
@@ -355,16 +269,16 @@
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
                 <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5" style="justify-content: center;">
-                        <div class="col-md-9">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required"/>
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" width: 100% />
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email"/>
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" width: 100% />
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
@@ -374,13 +288,14 @@
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div> 
                             </div>
                         </div>-->
-                        
+                        <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required" width: 100%></textarea>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                         </div>
+                    </div>
                     <!-- Submit success message-->
                     <!---->
                     <!-- This is what your users will see when the form-->
@@ -399,10 +314,9 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center" style="padding-top: 50px"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
-                       
-                     </div>
-                  </form>
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                      </div>
+                </form>
                </div>
             </div>
         </section>

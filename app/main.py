@@ -87,12 +87,12 @@ def uploaded_file(filename):
         labels = set(labels)
         labels = [emotion.capitalize() for emotion in labels]
         labels = and_syntax(labels) # Hudson here is the labels 
-        return render_template('results.html', confidences=format_confidences, labels=labels,
+        return render_template('new_result.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
                                filename=filename)
     else:
         found = False
-        return render_template('results.html', labels='No Emotion', old_filename=filename, filename=filename)
+        return render_template('new_result.html', labels='No Emotion', old_filename=filename, filename=filename)
 
 
 @app.route(f'{base_url}/uploads/<path:filename>')
