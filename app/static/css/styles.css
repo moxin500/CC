@@ -11466,6 +11466,17 @@ header.masthead {
   background-position: center center;
   background-size: cover;
 }
+header.newmast {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("https://drive.google.com/uc?export=view&id=1kiQGxlnrEo7LgmZmXCLP93-H89-rz_tq")
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;

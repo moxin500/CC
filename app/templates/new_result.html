@@ -8,7 +8,7 @@
         <title>Currency Converter</title>
         <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/logo.JPG')}}"/>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico')}}" />
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/icon.png')}}"/>
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -46,12 +46,10 @@
                     {% if labels == 'no emotion' %}
                     <div>We missed? See why below.</div>
                     {% else %}
-                    <div class="lead"><em>with {{ confidences }} confidence.</em></div>
+                    <div class="lead" style="font-size: 1.65rem"><em>with {{ confidences }} confidence.</em></div>
                     {% endif %}
-                <img src="{{ url_for('static', filename='uploads/' + filename)}}" width="350" height="350">
-                <div class="masthead-subheading">Travel With Assurance.</div>
-                <div class="masthead-heading text-uppercase">Convert<br>With Ease</div>
-
+                <img src="{{ url_for('static', filename='uploads/' + filename)}}" width="350" height="auto" style="padding-top: 3rem";
+>
             </div>
         </header>
 
@@ -74,10 +72,16 @@
 * {
   box-sizing: border-box;
 }
+      
 
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
+  width: 50%;
+  padding: 50px;
+}
+.rect {
+  float: center;
   width: 50%;
   padding: 50px;
 }
@@ -89,32 +93,9 @@
   }
 }
 </style>
-     
-  
-   
-  
- 
-            <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container">
-                <div class="text-center">
-                  
-
-
-                    <h2 class="section-heading text-uppercase">Our Product</h2>
-            <h3 class="section-subheading text-muted">Please upload an image of currency, a menu or a price tag</h3>
-        </div>
-        <div class="row text-center">
-            <div class="upload"><strong></strong>
-                   <form>
-                     <input type = "file" name = "upload" accept = "image/*" />
-                   </form>
-            </div>
-        </div>
-    </div>
-</section>
+            
         <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
+        <section class="page-section bg-light" id="portfolio" style="padding-top: 6rem 0">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Tech Stack</h2>
@@ -122,29 +103,14 @@
                 </div>
                 <div class="row">
                   <div class = "row1" height = 100px width = 100px>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
-                        <div class="portfolio-item" height = 2.5rem width = 1.5rem>
-                            <a class="portfolio-link" data-bs-toggle="modal" href="https://pytorch.org/hub/ultralytics_yolov5/#:~:text=YOLOv5%20%F0%9F%9A%80%20is%20a%20family,to%20ONNX%2C%20CoreML%20and%20TFLite.">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="https://miro.medium.com/max/1400/1*bSLNlG7crv-p-m4LVYYk3Q.png" alt="..." height = 200px width = 370px/>
-                            </a>
-                            <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
-                                <div class="portfolio-caption-heading">YOLOv5</div>
-                                <div class="portfolio-caption-subheading text-muted">Algorithm</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-6 col-sm-6 mb-4" style="padding-bottom: 50px">
                         <!-- Portfolio item 2-->
                          <div class="portfolio-item" height = 2.5rem width = 1.5rem>
-                            <a class="portfolio-link" data-bs-toggle="modal" href="https://www.python.org/">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
                                 <div class="portfolio-hover">
-                                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                  <div class="portfolio-hover-content"><i class="fa-brands fa-python fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png" alt="..." height = auto width = 370px/>
+                                <img class="img-fluid" src="https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png" alt="..." height = 200px width = 370px/>
                             </a>
                             <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
                                 <div class="portfolio-caption-heading">Python</div>
@@ -152,14 +118,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-6 col-sm-6 mb-4" style="padding-bottom: 50px">
                         <!-- Portfolio item 3-->
                         <div class="portfolio-item" height = 2.5rem width = 1.5rem>
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"><i class="fa-solid fa-code fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="https://developerpitstop.com/wp-content/uploads/2021/08/html-css-js.jpeg" alt="..." height = 200px width = 370px/>
+                                <img class="img-fluid" src="{{ url_for('static', filename='/assets/img/frontend.png')}}" alt="..." height = 200px width = 370px/>
                             </a>
                             <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
                                 <div class="portfolio-caption-heading">Front End</div>
@@ -167,12 +133,47 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-6 col-sm-6 mb-4" style="padding-bottom: 50px">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item" height = 2.5rem width = 1.5rem>
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fa-solid fa-chalkboard-user fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://external-preview.redd.it/K3Dd1xEKBRjP8xG6fzeGeaLrZaXePt7f--08XWL1e_4.jpg?width=640&crop=smart&auto=webp&s=0a8209dd38e71995079c4822c71f719028be7ab0" alt="..." height = 200px width = 370px/>
+                            </a>
+                            <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
+                                <div class="portfolio-caption-heading">Roboflow</div>
+                                <div class="portfolio-caption-subheading text-muted">Developer tool</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 mb-4" style="padding-bottom: 50px">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item" height = 2.5rem width = 1.5rem>
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fa-solid fa-camera-retro fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://miro.medium.com/max/1400/1*bSLNlG7crv-p-m4LVYYk3Q.png" alt="..." height = 200px width = 370px/>
+                            </a>
+                            <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
+                                <div class="portfolio-caption-heading">YOLO</div>
+                                <div class="portfolio-caption-subheading text-muted">Algorithm</div>
+                            </div>
+                        </div>
+                    </div>
                   </div>
                 </div>
             </div>
         </section>
-        <!-- About-->
-
+        <!--Path-->
+        <div class="container" style=" padding: 3rem 0">
+          <div class="text-center">
+              <h2 class="section-heading text-uppercase" style="padding-top: 3rem"><center>The Path</center></h2>
+              <img src="{{ url_for('static', filename='assets/img/2.png')}}" alt="..." style="width: 85%; margin-left: auto; margin-right: auto;"/>
+          </div>
+        </div>
         <!-- Team-->
         <section class="page-section bg-light" id="team">
             <div class="container">
@@ -196,7 +197,7 @@
                             <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
                             <h4>Noelle Chen</h4>
                             <p class="text-muted">Lead Marketer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ch3ddar_corgi/" target="_blank" aria-label="Noelle Chen Instagram Profile"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="mailto: noelychen@gmail.com" target="_blank" aria-label="Noelle Chen Email"><i class="fa-solid fa-envelope"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/729167303983235142" target="_blank" aria-label="Noelle Chen Discord Profile"><i class="fab fa-discord"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ch3ddar_corgi/" target="_blank" aria-label="Noelle Chen Instagram Profile";><i class="fab fa-instagram"></i></a>
                         </div>
@@ -213,7 +214,7 @@
                     </div>
                    <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/TeamImageLara.jpg')}}" alt="..." />
                             <h4>Lara Fernando</h4>
                             <p class="text-muted">Lead Developer</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
@@ -243,7 +244,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">A team accross difference time zones, some of us rising earlier than others (ah, what a struggle), guided by our wonderful instructor and team leader Prasanga. </p></div>
                 </div>
             </div>
         </section>
@@ -269,16 +270,16 @@
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
                 <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
+                    <div class="row align-items-stretch mb-5" style="justify-content: center;">
+                        <div class="col-md-9">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" width: 100% />
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required"/>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" width: 100% />
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email"/>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
@@ -288,23 +289,20 @@
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div> 
                             </div>
                         </div>-->
-                        <div class="col-md-6">
+                        
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required" width: 100%></textarea>
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                         </div>
-                    </div>
                     <!-- Submit success message-->
                     <!---->
                     <!-- This is what your users will see when the form-->
                     <!-- has successfully submitted-->
                     <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
+                            <div class="fw-bolder">Thank you for your message!</div>
                             <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                         </div>
                     </div>
@@ -314,9 +312,10 @@
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
-                      </div>
-                </form>
+                    <div class="text-center" style="padding-top: 50px"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                       
+                     </div>
+                  </form>
                </div>
             </div>
         </section>
@@ -348,23 +347,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/1.jpg')}}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Threads
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Illustration
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">YOLO</h2>
+                                    <p class="item-intro text-muted">Object detection algorithm</p>
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/1.png')}}" alt="..." />
+                                    <p>YOLO, an acronym for "You Only Look Once", is an object detection algorithms acclaimed for its speed and accuracy. We used YOLOv5 and YOLOv7 to train our program to recognize currency, menus, and price tags.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -383,23 +372,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/2.jpg')}}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Explore
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">Python</h2>
+                                    <p class="item-intro text-muted">Coding language</p>
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/2.png')}}" alt="..." />
+                                    <p>Python is the main coding language that we used to create our project. We utilized it throughout our project back-end to collect data and create and train our model.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close 
                                     </button>
                                 </div>
                             </div>
@@ -418,23 +397,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/3.jpg')}}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Finish
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Identity
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">JavaScript, CSS, and HTML</h2>
+                                    <p class="item-intro text-muted">Coding languages</p>
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/3.png')}}" alt="..." />
+                                    <p>JavaScript, CSS, and HTML (HyperText Markup Language) are coding languages commonly used for website design. JavaScript assists in website interaction, CSS overlooks style, and HTML structures the layout of the page. We used these languages to code the website you are seeing right now!</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -453,23 +422,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/4.jpg')}}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Lines
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Branding
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">Roboflow</h2>
+                                    <p class="item-intro text-muted">Computer vision developer tool</p>
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/4.png')}}" alt="..." />
+                                    <p>Roboflow oversees the dataset by managing the images, annotations and labels, preprocessing, augmentations, file formats, one-click model training, deployment, and active learning. We easily stored, labeled, and augmented our dataset with Roboflow.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -490,21 +449,11 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/5.jpg')}}" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/5.png')}}" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Southwest
-                                        <u></u>                                       </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Website Design
-                                        </li>
-                                    </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -525,21 +474,11 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/6.jpg')}}" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/6.png')}}" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Photography
-                                        </li>
-                                    </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close 
                                     </button>
                                 </div>
                             </div>

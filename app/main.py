@@ -28,7 +28,12 @@ model = torch.hub.load("ultralytics/yolov5", "custom", path = 'best2.pt', force_
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    
+def conversion_logic():
+    html_text = "<h1>This is heading 1</h1>"
 
+    return html_text
+    
 @app.route(f'{base_url}', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
@@ -86,7 +91,9 @@ def uploaded_file(filename):
         # labels: sorting and capitalizing, putting into function
         labels = set(labels)
         labels = [emotion.capitalize() for emotion in labels]
-        labels = and_syntax(labels) # Hudson here is the labels 
+        labels = and_syntax(labels)
+        # Hudson here is the labels
+#         conversion_logic(labels[0], image_path)
         return render_template('new_result.html', confidences=format_confidences, labels=labels,
                                old_filename=filename,
                                filename=filename)

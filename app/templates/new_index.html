@@ -8,7 +8,7 @@
         <title>Currency Converter</title>
         <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/logo.JPG')}}"/>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico')}}" />
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/icon.png')}}"/>
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -36,19 +36,35 @@
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
-                </div>
+                </div>  
             </div>
         </nav>
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
+              <button type="location_button">Locate</button>
                 <div class="masthead-subheading">Travel With Assurance.</div>
                 <div class="masthead-heading text-uppercase">Convert<br>With Ease</div>
                 <a class="btn btn-primary btn-xl text-uppercase" id='seefood_button'> 
                                                   <form id='seefood_form' method=post enctype=multipart/form-data>
                                     <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
-                                </form>
-                  Try Our Product</a>
+                                </form>Try Our Product</a>
+                   <form action="/action_page.php">
+                    <label currency="currency" style="padding-top: 1rem">Choose a currency:</label>
+                    <select id="currency" name="currency" size="1">
+                      <option value="Euro">Euro</option>
+                      <option value="US Dollar">US Dollar</option>
+                      <option value="Yen">Yen </option>
+                      <option value="Swedish krona">Swedish Krona</option>
+                      <option value="Icelandic Krona">Icelandic Krona</option>
+                      <option value="Ruble">Ruble</option>
+                      <option value="GBP">GBP</option>
+                      <option value="AUD">AUD</option>
+                      <option value="CAD">CAD</option>
+                    </select><br><br>
+                    
+                  </form>
+                
             </div>
         </header>
 
@@ -90,57 +106,37 @@
   
     <div class="row">
   <div class="column" style="background-color:#F8F9FA;">
-       <div class="card" height = 2.5rem width = 1.5rem>
+       <div class="card">
                             <a class="portfolio-link" data-bs-toggle="modal" href="">
                            
-<div style="text-align: center;">
-<div>
-  
-  </div>
-                                <img class="card-top-img-fluid" src="https://s.wsj.net/public/resources/images/BN-HL850_krona0_G_20150318092849.jpg" style="max-width: 90%"/>
-                              </div>  
+
+
+                                   <img class="card-top-img-fluid" src="https://c.express.pk/2022/01/2268877-dollerpoundeuroxx-1641651814-376-640x480.jpg" style="max-width: 90%; max-height: 100%" />
+                               
                             </a>
                             <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
-                              <div class="portfolio-caption-heading"><p style="color:black; font-size:1vw; font-family:Times New Roman">Handling foreign currency can be daunting during travel.<br><br>Let us help.</p></div>
-                              <div class="portfolio-caption-subheading text-muted"></div>
+                              <div class="portfolio-text"><h3 style="white-space:pre-wrap; font-family:Montserrat; color:black; font-size:1.3vw; font-weight:normal"><center><br>Handling foreign currency can be daunting during travel.</center><br><center>Let us help.</center></h3></div>
                             </div>
                         </div>
                     </div>
                    
   <div class="column" style="background-color:#F8F9FA;">
-    <div class="card" height = 2.5rem width = 1.5rem>
-                            <a class="portfolio-link" data-bs-toggle="modal" href="https://www.python.org/">
-                                <div class="portfolio-hover">
+    <div class="card">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="">
                               
-                                <img class="card-top-img-fluid" src="https://cocalc19.ai-camp.dev/dc3c524b-b1a9-4d5a-abf7-cab86ab7be3c/port/12345/static/uploads/nzd.jpg" style="max-width: 90%"/>
-                           
+                                <img class="card-top-img-fluid" src="https://cocalc19.ai-camp.dev/dc3c524b-b1a9-4d5a-abf7-cab86ab7be3c/port/12345/static/uploads/nzd.jpg" style="max-width: 90%; max-height: 100%"/>
+      </a>
                             <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
-                              <div class="portfolio-caption-heading"><p style="color:black; font-size:1vw; font-family:Times New Roman">Our mission is to assist you in easily identifying your bills with object recognition technology and always be aware of the price you’re spending in your currency.</p></div>
+                              <div class="portfolio-text"><h3 style="white-space:pre-wrap; font-size:1.3vw; font-family:Montserrat; color:black; font-weight:normal"><center><br>Our mission is to assist you in easily identifying your bills with object recognition technology and always be aware of the price you’re spending in your currency.</center></h3></div>
                                 
                             </div>
                         
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    
 </div>
-  
-   </div>
-</div>
+  </div>
     </div>
- 
-            <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-            <h3 class="section-subheading text-muted">TEXT HERE</h3>
-        </div>
-        <div class="row text-center">
-            <img src="{{ url_for('static', filename='assets/img/logo.JPG')}}" alt="..." width="20px" height="auto" margin-left: auto; margin-right: auto; />
-        </div>
-    </div>
-</section>
-        <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
+<!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio" style="padding-top: 6rem 0">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Tech Stack</h2>
@@ -148,29 +144,14 @@
                 </div>
                 <div class="row">
                   <div class = "row1" height = 100px width = 100px>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
-                        <div class="portfolio-item" height = 2.5rem width = 1.5rem>
-                            <a class="portfolio-link" data-bs-toggle="modal" href="https://pytorch.org/hub/ultralytics_yolov5/#:~:text=YOLOv5%20%F0%9F%9A%80%20is%20a%20family,to%20ONNX%2C%20CoreML%20and%20TFLite.">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="https://miro.medium.com/max/1400/1*bSLNlG7crv-p-m4LVYYk3Q.png" alt="..." height = 200px width = 370px/>
-                            </a>
-                            <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
-                                <div class="portfolio-caption-heading">YOLOv5</div>
-                                <div class="portfolio-caption-subheading text-muted">Algorithm</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-6 col-sm-6 mb-4" style="padding-bottom: 50px">
                         <!-- Portfolio item 2-->
                          <div class="portfolio-item" height = 2.5rem width = 1.5rem>
-                            <a class="portfolio-link" data-bs-toggle="modal" href="https://www.python.org/">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
                                 <div class="portfolio-hover">
-                                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                  <div class="portfolio-hover-content"><i class="fa-brands fa-python fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png" alt="..." height = auto width = 370px/>
+                                <img class="img-fluid" src="https://logos-world.net/wp-content/uploads/2021/10/Python-Symbol.png" alt="..." height = 200px width = 370px/>
                             </a>
                             <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
                                 <div class="portfolio-caption-heading">Python</div>
@@ -178,18 +159,48 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-6 col-sm-6 mb-4" style="padding-bottom: 50px">
                         <!-- Portfolio item 3-->
                         <div class="portfolio-item" height = 2.5rem width = 1.5rem>
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"><i class="fa-solid fa-code fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="https://developerpitstop.com/wp-content/uploads/2021/08/html-css-js.jpeg" alt="..." height = 200px width = 370px/>
+                                <img class="img-fluid" src="{{ url_for('static', filename='/assets/img/frontend.png')}}" alt="..." height = 200px width = 370px/>
                             </a>
                             <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
                                 <div class="portfolio-caption-heading">Front End</div>
                                 <div class="portfolio-caption-subheading text-muted">JavaSript, HTML, CSS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 mb-4" style="padding-bottom: 50px">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item" height = 2.5rem width = 1.5rem>
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fa-solid fa-chalkboard-user fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://external-preview.redd.it/K3Dd1xEKBRjP8xG6fzeGeaLrZaXePt7f--08XWL1e_4.jpg?width=640&crop=smart&auto=webp&s=0a8209dd38e71995079c4822c71f719028be7ab0" alt="..." height = 200px width = 370px/>
+                            </a>
+                            <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
+                                <div class="portfolio-caption-heading">Roboflow</div>
+                                <div class="portfolio-caption-subheading text-muted">Developer tool</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 mb-4" style="padding-bottom: 50px">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item" height = 2.5rem width = 1.5rem>
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fa-solid fa-camera-retro fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="https://miro.medium.com/max/1400/1*bSLNlG7crv-p-m4LVYYk3Q.png" alt="..." height = 200px width = 370px/>
+                            </a>
+                            <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
+                                <div class="portfolio-caption-heading">YOLO</div>
+                                <div class="portfolio-caption-subheading text-muted">Algorithm</div>
                             </div>
                         </div>
                     </div>
@@ -202,14 +213,14 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Development Process</h2>
-                    <h3 class="section-subheading text-muted">Despite only having three weeks, we fought with several AI and OCR algorithms with further training and use of alternative data.</h3>
+                    <h3 class="section-subheading text-muted">Despite only having three weeks, we explored several AI and OCR algorithms and use of alternative data.</h3>
                 </div>
                 <ul class="timeline">
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='/images/cocalcimg.png')}}" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>7/18-8/5</h4>
+                                <h4>July 18</h4>
                                 <h4 class="subheading">Topic Selection</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted">We began by collecting project ideas from the group, then we assessed the viability from a technological standpoint and potential use case. After initially settling on facial recognition, we switched to a currency converter due to the technical challenges associated with facial recognition training and a limited use case.  </p></div>
@@ -219,7 +230,7 @@
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='IMAGEIMAGEIMAGE.png')}}" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>7/21</h4>
+                                <h4>July 21</h4>
                                 <h4 class="subheading">Data</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted">We then set out to gather data on banknotes, price tags, and menus from around the world that could use to train an AI model. We collected images in Roboflow and utilized them to train Yolov5 and Yolov7 models in Google Colab and Runpod.</p></div>
@@ -229,7 +240,7 @@
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='gpssat.jpg')}}" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>7/26-29</h4>
+                                <h4>July 26-29</h4>
                                 <h4 class="subheading">Conversion</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted">After identifying the image, it is passed to EasyOCR to lift the bill's denomination off the not. We also wrote a function to take the EXIF GPS data from the photo to identify the country in which the person took the photo and then determine the currency used there.</p></div>
@@ -239,7 +250,7 @@
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='currencybox.jpg')}}" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>July 2020</h4>
+                                <h4>August 5</h4>
                                 <h4 class="subheading">Final Product</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted">The final product accepts an image of a price tag, menu, or bill. It identifies the images and locates the price(s) on it. It combines the price with the GPS location to attain the conversion rates. Finally, it projects the price of the image in a more familiar currency.</p></div>
@@ -269,12 +280,12 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/Prasanga.JPG')}}" alt="..." />
                             <h4>Prasanga Neupane</h4>
                             <p class="text-muted">Team Instructor</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/prasanga_neupane" aria-label="Prasanga Neupane Instagram Profile"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/829912458453975050" aria-label="Prasanga Neupane Discord Profile"><i class="fab fa-discord"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/prasanga-neupane-b4663a167/" aria-label="Prasanga Neupane LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Prasanga Neupane Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Prasanga Neupane Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/prasanga-neupane-b4663a167/" target="_blank" aria-label="Prasanga Neupane LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -282,7 +293,7 @@
                             <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
                             <h4>Noelle Chen</h4>
                             <p class="text-muted">Lead Marketer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ch3ddar_corgi/" target="_blank" aria-label="Noelle Chen Instagram Profile"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="mailto: noelychen@gmail.com" target="_blank" aria-label="Noelle Chen Email"><i class="fa-solid fa-envelope"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/729167303983235142" target="_blank" aria-label="Noelle Chen Discord Profile"><i class="fab fa-discord"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ch3ddar_corgi/" target="_blank" aria-label="Noelle Chen Instagram Profile";><i class="fab fa-instagram"></i></a>
                         </div>
@@ -299,7 +310,7 @@
                     </div>
                    <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/TeamImageLara.jpg')}}" alt="..." />
                             <h4>Lara Fernando</h4>
                             <p class="text-muted">Lead Developer</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
@@ -329,7 +340,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">A team accross difference time zones, some of us rising earlier than others (ah, what a struggle), guided by our wonderful instructor and team leader Prasanga. </p></div>
                 </div>
             </div>
         </section>
@@ -387,9 +398,7 @@
                     <!-- has successfully submitted-->
                     <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
+                            <div class="fw-bolder">Thank you for your message!</div>
                             <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                         </div>
                     </div>
@@ -412,9 +421,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-start">Pink Panthers 2022</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://mobile.twitter.com/aicampofficial" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/aicampdotorg/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/company/ai-camp" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Privacy Policy</a>
@@ -434,23 +443,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/1.jpg')}}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Threads
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Illustration
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">YOLO</h2>
+                                    <p class="item-intro text-muted">Object detection algorithm</p>
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/1.png')}}" alt="..." />
+                                    <p>YOLO, an acronym for "You Only Look Once", is an object detection algorithms acclaimed for its speed and accuracy. We used YOLOv5 and YOLOv7 to train our program to recognize currency, menus, and price tags.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -469,23 +468,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/2.jpg')}}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Explore
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">Python</h2>
+                                    <p class="item-intro text-muted">Coding language</p>
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/2.png')}}" alt="..." />
+                                    <p>Python is the main coding language that we used to create our project. We utilized it throughout our project back-end to collect data and create and train our model.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close 
                                     </button>
                                 </div>
                             </div>
@@ -504,23 +493,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/3.jpg')}}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Finish
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Identity
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">JavaScript, CSS, and HTML</h2>
+                                    <p class="item-intro text-muted">Coding languages</p>
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/3.png')}}" alt="..." />
+                                    <p>JavaScript, CSS, and HTML (HyperText Markup Language) are coding languages commonly used for website design. JavaScript assists in website interaction, CSS overlooks style, and HTML structures the layout of the page. We used these languages to code the website you are seeing right now!</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -539,23 +518,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/4.jpg')}}" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Lines
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Branding
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">Roboflow</h2>
+                                    <p class="item-intro text-muted">Computer vision developer tool</p>
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/4.png')}}" alt="..." />
+                                    <p>Roboflow oversees the dataset by managing the images, annotations and labels, preprocessing, augmentations, file formats, one-click model training, deployment, and active learning. We easily stored, labeled, and augmented our dataset with Roboflow.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -576,21 +545,11 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/5.jpg')}}" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/5.png')}}" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Southwest
-                                        <u></u>                                       </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Website Design
-                                        </li>
-                                    </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -611,21 +570,11 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/6.jpg')}}" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/6.png')}}" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Photography
-                                        </li>
-                                    </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close 
                                     </button>
                                 </div>
                             </div>
@@ -669,4 +618,7 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
+
+
+
   
