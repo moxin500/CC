@@ -30,7 +30,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">About</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="#services">About</a></li>-->
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Tech Stack</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Process</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
@@ -42,38 +42,41 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-              <button type="location_button">Locate</button>
                 <div class="masthead-subheading">Travel With Assurance.</div>
                 <div class="masthead-heading text-uppercase">Convert<br>With Ease</div>
-                <a class="btn btn-primary btn-xl text-uppercase" id='seefood_button'> 
+                 
                                                   <form id='seefood_form' method=post enctype=multipart/form-data>
                                     <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
-                                </form>Try Our Product</a>
-                   <form action="/action_page.php">
-                    <label currency="currency" style="padding-top: 1rem">Choose a currency:</label>
-                    <select id="currency" name="currency" size="1">
-                      <option value="Euro">Euro</option>
-                      <option value="US Dollar">US Dollar</option>
-                      <option value="Yen">Yen </option>
-                      <option value="Swedish krona">Swedish Krona</option>
-                      <option value="Icelandic Krona">Icelandic Krona</option>
-                      <option value="Ruble">Ruble</option>
-                      <option value="GBP">GBP</option>
-                      <option value="AUD">AUD</option>
-                      <option value="CAD">CAD</option>
-                    </select><br><br>
-                    
-                  </form>
-                
+                                                    <a class="btn btn-primary btn-xl text-uppercase" id='seefood_button'>Try Our Product</a><br>
+                                                    <label from="from" style="padding-top: 1rem">Type of Currency:</label>                   
+                                                      <select id="from" name="from" size="1">                       
+                                                        <option value="EUR">Euro</option>                                                             
+                                                        <option value="USD">US Dollar</option>                      
+                                                        <option value="JPY">Yen </option>                       
+                                                        <option value="SEK">Swedish Krona</option>                       
+                                                        <option value="ISK">Icelandic Krona</option>                       
+                                                        <option value="RUR">Ruble</option>                       
+                                                        <option value="GBP">GBP</option>                       
+                                                        <option value="AUS">AUD</option>                       
+                                                        <option value="CAD">CAD</option>
+                                                        <option value="INR">Rupee</option></select><br><br>
+                                                    <label currency="currency">Currency to Covert To:</label>                     
+                                                      <select id="currency_target" name="currency_target" size="1">                       
+                                                        <option value="EUR">Euro</option>                                                             
+                                                        <option value="USD">US Dollar</option>                      
+                                                        <option value="JPY">Yen </option>                       
+                                                        <option value="SEK">Swedish Krona</option>                       
+                                                        <option value="ISK">Icelandic Krona</option>                       
+                                                        <option value="RUR">Ruble</option>                       
+                                                        <option value="GBP">GBP</option>                       
+                                                        <option value="AUS">AUD</option>                       
+                                                        <option value="CAD">CAD</option>
+                                                        <option value="INR">Rupee</option></select><br><br>
+                                </form>
             </div>
         </header>
 
     <style>
-<!--                                         <form action="/action_page.php">
-  <input type="file" id="myFile" name="filename">
-  <input type="submit">
-</form>
-             -->
 <style>
       .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -102,10 +105,22 @@
   }
 }
 </style>
-     
-  
+      
+      <!-- Poll -->
+<script type="text/javascript">
+(function(d,s,id,u){
+  if (d.getElementById(id)) return;
+  var js, sjs = d.getElementsByTagName(s)[0],
+      t = Math.floor(new Date().getTime() / 1000000);
+  js=d.createElement(s); js.id=id; js.async=1; js.src=u+'?'+t;
+  sjs.parentNode.insertBefore(js, sjs);
+}(document, 'script', 'os-widget-jssdk', 'https://www.opinionstage.com/assets/loader.js'));
+</script><div id="os-widget-1037781" class="os_poll" data-path="/polls/2857669" data-of="noelle-chen" data-opinionstage-widget="e7a3f667-c055-4235-81d4-4e0f70a79db7"></div>
+
+      
+      <!-- Cards -->
     <div class="row">
-  <div class="column" style="background-color:#F8F9FA;">
+<div class="column" style="background-color:#F8F9FA;">
        <div class="card">
                             <a class="portfolio-link" data-bs-toggle="modal" href="">
                            
@@ -115,7 +130,7 @@
                                
                             </a>
                             <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
-                              <div class="portfolio-text"><h3 style="white-space:pre-wrap; font-family:Montserrat; color:black; font-size:1.3vw; font-weight:normal"><center><br>Handling foreign currency can be daunting during travel.</center><br><center>Let us help.</center></h3></div>
+                              <div class="portfolio-text"><h3 style="white-space:pre-wrap; font-family: var(--bs-body-font-family);; color:black; font-size:1.3vw; font-weight:normal"><center>Handling foreign currency can be daunting during travel.</center><br><center>Let us help.</center></h3></div>
                             </div>
                         </div>
                     </div>
@@ -127,10 +142,9 @@
                                 <img class="card-top-img-fluid" src="https://cocalc19.ai-camp.dev/dc3c524b-b1a9-4d5a-abf7-cab86ab7be3c/port/12345/static/uploads/nzd.jpg" style="max-width: 90%; max-height: 100%"/>
       </a>
                             <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
-                              <div class="portfolio-text"><h3 style="white-space:pre-wrap; font-size:1.3vw; font-family:Montserrat; color:black; font-weight:normal"><center><br>Our mission is to assist you in easily identifying your bills with object recognition technology and always be aware of the price you’re spending in your currency.</center></h3></div>
+                              <div class="portfolio-text"><h3 style="white-space:pre-wrap; font-size:1.3vw; font-family: var(--bs-body-font-family); color:black; font-weight:normal"><center>Our mission is to assist you in easily identifying your bills with object recognition technology and always be aware of the price you’re spending in your currency.</center></h3></div>
                                 
                             </div>
-                        
                     
 </div>
   </div>
@@ -185,7 +199,7 @@
                             </a>
                             <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
                                 <div class="portfolio-caption-heading">Roboflow</div>
-                                <div class="portfolio-caption-subheading text-muted">Developer tool</div>
+                                <div class="portfolio-caption-subheading text-muted">Developer Tool</div>
                             </div>
                         </div>
                     </div>
@@ -230,7 +244,7 @@
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ url_for('static', filename='IMAGEIMAGEIMAGE.png')}}" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>July 21</h4>
+                                <h4>July 19-25</h4>
                                 <h4 class="subheading">Data</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted">We then set out to gather data on banknotes, price tags, and menus from around the world that could use to train an AI model. We collected images in Roboflow and utilized them to train Yolov5 and Yolov7 models in Google Colab and Runpod.</p></div>
@@ -283,59 +297,50 @@
                             <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/Prasanga.JPG')}}" alt="..." />
                             <h4>Prasanga Neupane</h4>
                             <p class="text-muted">Team Instructor</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Prasanga Neupane Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Prasanga Neupane Facebook Profile"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/prasanga-neupane-b4663a167/" target="_blank" aria-label="Prasanga Neupane LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
-                            <h4>Noelle Chen</h4>
-                            <p class="text-muted">Lead Marketer</p>
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/noelle.jpeg')}}" alt="..." />
+                            <h4 style="padding-bottom: 1rem">Noelle Chen</h4>
+                          <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ch3ddar_corgi/" target="_blank" aria-label="Noelle Chen Instagram Profile";><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="mailto: noelychen@gmail.com" target="_blank" aria-label="Noelle Chen Email"><i class="fa-solid fa-envelope"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/729167303983235142" target="_blank" aria-label="Noelle Chen Discord Profile"><i class="fab fa-discord"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ch3ddar_corgi/" target="_blank" aria-label="Noelle Chen Instagram Profile";><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
-                            <h4>Will Crouch</h4>
-                            <p class="text-muted">Lead Developer</p>
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/willgt4rs.jpg')}}" alt="..." />
+                            <h4 style="padding-bottom: 1rem">Will Crouch</h4>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/moxin500/" target="_blank" aria-label="Will Crouch Instagram Profile"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="mailto: willcrouch1@gmail.com" target="_blank" aria-label="Will Crouch Email"><i class="fab fa-solid fa-envelope"></i></a>
+                           <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/250045273991151626" target="_blank" aria-label="Will Crouch Discord Profile"><i class="fab fa-discord"></i></a>
                         </div>
                     </div>
                    <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/TeamImageLara.jpg')}}" alt="..." />
-                            <h4>Lara Fernando</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <h4 style="padding-bottom: 1rem">Lara Fernando</h4>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/skatingrabbit11/" target="_blank" aria-label="Noelle Chen Instagram Profile";><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="mailto: skatingrabbit11@gmail.com" target="_blank" aria-label="Lara Fernando Email"><i class="fa-solid fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/709510807142006845" target="_blank" aria-label="Lara Fernando Discord Profile"><i class="fab fa-discord"></i></a>
                         </div>
                     </div>
                    <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
-                            <h4>Hudson Siglinger</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/IMG_1814.jpg')}}" alt="..." />
+                            <h4 style="padding-bottom: 1rem">Hudson Siglinger</h4>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/546792912797696001" aria-label="Hudson Siglinger Discord Profile"><i class="fab fa-discord"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="mailto: hwsiglinger@gmail.com" target="_blank" aria-label="Hudson Siglinger Email"><i class="fa-solid fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/hudson-siglinger-711a66247/" target="_blank" aria-label="Hudson Siglinger LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                    <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
-                            <h4>Abe M</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+    <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/abe.jpg')}}" alt="..." />
+                            <h4 style="padding-bottom: 1rem">Abraham Manu</h4>
+                                                    <a class="btn btn-dark btn-social mx-2" href="mailto: abraham.p.manu@gmail.com" target="_blank" aria-label="Abraham Manu Email"><i class="fa-solid fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
@@ -427,7 +432,7 @@
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Privacy Policy</a>
-                        <a class= "link-dark text-decoration-none" href="#!">Terms of Use</a>
+                        <!--<a class= "link-dark text-decoration-none" href="#!">Terms of Use</a>-->
                     </div>
                 </div>
             </div>
@@ -446,7 +451,7 @@
                                     <h2 class="text-uppercase">YOLO</h2>
                                     <p class="item-intro text-muted">Object detection algorithm</p>
                                     <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/1.png')}}" alt="..." />
-                                    <p>YOLO, an acronym for "You Only Look Once", is an object detection algorithms acclaimed for its speed and accuracy. We used YOLOv5 and YOLOv7 to train our program to recognize currency, menus, and price tags.</p>
+                                    <p>YOLO, an acronym for "You Only Look Once", is an object detection algorithm acclaimed for its speed and accuracy. We used YOLOv5 and YOLOv7 to train our program to recognize currency, menus, and price tags.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close

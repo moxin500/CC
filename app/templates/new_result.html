@@ -50,6 +50,9 @@
                     {% endif %}
                 <img src="{{ url_for('static', filename='uploads/' + filename)}}" width="350" height="auto" style="padding-top: 3rem";
 >
+<div>{% autoescape false %}
+    {{conversion_str}}
+  {% endautoescape %}</div>
             </div>
         </header>
 
@@ -144,7 +147,7 @@
                             </a>
                             <div class="portfolio-caption" height = 1.5rem width = 1.5rem>
                                 <div class="portfolio-caption-heading">Roboflow</div>
-                                <div class="portfolio-caption-subheading text-muted">Developer tool</div>
+                                <div class="portfolio-caption-subheading text-muted">Developer Tool</div>
                             </div>
                         </div>
                     </div>
@@ -184,62 +187,53 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/Prasanga.JPG')}}" alt="..." />
                             <h4>Prasanga Neupane</h4>
                             <p class="text-muted">Team Instructor</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Prasanga Neupane Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Prasanga Neupane Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/prasanga-neupane-b4663a167/" aria-label="Prasanga Neupane LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/prasanga-neupane-b4663a167/" target="_blank" aria-label="Prasanga Neupane LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
-                            <h4>Noelle Chen</h4>
-                            <p class="text-muted">Lead Marketer</p>
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/noelle.jpeg')}}" alt="..." />
+                            <h4 style="padding-bottom: 1rem">Noelle Chen</h4>
+                          <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ch3ddar_corgi/" target="_blank" aria-label="Noelle Chen Instagram Profile";><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="mailto: noelychen@gmail.com" target="_blank" aria-label="Noelle Chen Email"><i class="fa-solid fa-envelope"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/729167303983235142" target="_blank" aria-label="Noelle Chen Discord Profile"><i class="fab fa-discord"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ch3ddar_corgi/" target="_blank" aria-label="Noelle Chen Instagram Profile";><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
-                            <h4>Will Crouch</h4>
-                            <p class="text-muted">Lead Developer</p>
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/willgt4rs.jpg')}}" alt="..." />
+                            <h4 style="padding-bottom: 1rem">Will Crouch</h4>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/moxin500/" target="_blank" aria-label="Will Crouch Instagram Profile"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="mailto: willcrouch1@gmail.com" target="_blank" aria-label="Will Crouch Email"><i class="fab fa-solid fa-envelope"></i></a>
+                           <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/250045273991151626" target="_blank" aria-label="Will Crouch Discord Profile"><i class="fab fa-discord"></i></a>
                         </div>
                     </div>
                    <div class="col-lg-4">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/TeamImageLara.jpg')}}" alt="..." />
-                            <h4>Lara Fernando</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <h4 style="padding-bottom: 1rem">Lara Fernando</h4>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/skatingrabbit11/" target="_blank" aria-label="Noelle Chen Instagram Profile";><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="mailto: skatingrabbit11@gmail.com" target="_blank" aria-label="Lara Fernando Email"><i class="fa-solid fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/709510807142006845" target="_blank" aria-label="Lara Fernando Discord Profile"><i class="fab fa-discord"></i></a>
                         </div>
                     </div>
                    <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
-                            <h4>Hudson Siglinger</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/IMG_1814.jpg')}}" alt="..." />
+                            <h4 style="padding-bottom: 1rem">Hudson Siglinger</h4>
+                            <a class="btn btn-dark btn-social mx-2" href="https://discordapp.com/users/546792912797696001" aria-label="Hudson Siglinger Discord Profile"><i class="fab fa-discord"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="mailto: hwsiglinger@gmail.com" target="_blank" aria-label="Hudson Siglinger Email"><i class="fa-solid fa-envelope"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/hudson-siglinger-711a66247/" target="_blank" aria-label="Hudson Siglinger LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                    <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/1.jpg')}}" alt="..." />
-                            <h4>Abe M</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+    <img class="mx-auto rounded-circle" src="{{ url_for('static', filename='assets/img/team/abe.jpg')}}" alt="..." />
+                            <h4 style="padding-bottom: 1rem">Abraham Manu</h4>
+                                                    <a class="btn btn-dark btn-social mx-2" href="mailto: abraham.p.manu@gmail.com" target="_blank" aria-label="Abraham Manu Email"><i class="fa-solid fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
@@ -331,7 +325,7 @@
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Privacy Policy</a>
-                        <a class= "link-dark text-decoration-none" href="#!">Terms of Use</a>
+                        <!--<a class= "link-dark text-decoration-none" href="#!">Terms of Use</a>-->
                     </div>
                 </div>
             </div>
@@ -350,7 +344,7 @@
                                     <h2 class="text-uppercase">YOLO</h2>
                                     <p class="item-intro text-muted">Object detection algorithm</p>
                                     <img class="img-fluid d-block mx-auto" src="{{ url_for('static', filename='assets/img/portfolio/1.png')}}" alt="..." />
-                                    <p>YOLO, an acronym for "You Only Look Once", is an object detection algorithms acclaimed for its speed and accuracy. We used YOLOv5 and YOLOv7 to train our program to recognize currency, menus, and price tags.</p>
+                                    <p>YOLO, an acronym for "You Only Look Once", is an object detection algorithm acclaimed for its speed and accuracy. We used YOLOv5 and YOLOv7 to train our program to recognize currency, menus, and price tags.</p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close
